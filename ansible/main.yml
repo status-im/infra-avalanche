@@ -1,0 +1,5 @@
+---
+- name: Configure Avalanche hosts
+  hosts: avalanche
+  roles:
+    - { role: open-ports, tags: open-ports }

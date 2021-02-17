@@ -1,0 +1,4 @@
+---
+open_ports_default_comment: 'Avalanche'
+open_ports_list:
+  - { port: 9653, protocol: 'tcp' }

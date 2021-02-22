@@ -6,5 +6,13 @@ module "avalanche" {
   size       = "s-2vcpu-2gb"
   domain     = var.domain
 
-  open_tcp_ports = ["9653"]
+  open_tcp_ports = ["80", "443", "9653"]
+}
+
+resource "cloudflare_record" "notes" {
+  zone_id = local.zones["status.im"]
+  name    = "avax-faucet.infra"
+  type    = "A"
+  proxied = false
+  value   = module.avalanche.public_ips[0]
 }

@@ -1,4 +1,5 @@
 ---
-open_ports_default_comment: 'Avalanche'
 open_ports_list:
-  - { port: 9653, protocol: 'tcp' }
+  - { port: 80,   protocol: 'tcp', comment: "Avax Faucet" }
+  - { port: 443,  protocol: 'tcp', comment: "Avax Faucet" }
+  - { port: 9653, protocol: 'tcp', comment: "Avalanche" }

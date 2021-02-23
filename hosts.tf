@@ -16,3 +16,11 @@ resource "cloudflare_record" "faucet" {
   proxied = false
   value   = module.avalanche.public_ips[0]
 }
+
+resource "cloudflare_record" "wallet" {
+  zone_id = local.zones["status.im"]
+  name    = "avax-wallet.infra"
+  type    = "A"
+  proxied = false
+  value   = module.avalanche.public_ips[1]
+}

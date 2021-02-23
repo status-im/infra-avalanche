@@ -9,7 +9,7 @@ module "avalanche" {
   open_tcp_ports = ["80", "443", "9653"]
 }
 
-resource "cloudflare_record" "notes" {
+resource "cloudflare_record" "faucet" {
   zone_id = local.zones["status.im"]
   name    = "avax-faucet.infra"
   type    = "A"

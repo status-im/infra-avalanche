@@ -6,7 +6,7 @@ module "avalanche" {
   size       = "s-2vcpu-2gb"
   domain     = var.domain
 
-  open_tcp_ports = ["80", "443", "9653"]
+  open_tcp_ports = ["80", "443", "9653", "9655"]
 }
 
 resource "cloudflare_record" "faucet" {

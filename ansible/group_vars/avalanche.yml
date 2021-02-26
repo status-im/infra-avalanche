@@ -3,3 +3,4 @@ open_ports_list:
   - { port: 80,   protocol: 'tcp', comment: "Avax Faucet" }
   - { port: 443,  protocol: 'tcp', comment: "Avax Faucet" }
   - { port: 9653, protocol: 'tcp', comment: "Avalanche" }
+  - { port: 9655, protocol: 'tcp', comment: "Avalanche" }

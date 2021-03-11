@@ -28,11 +28,10 @@ $(PROVISIONER_PATH):
 	chmod +x $(PROVISIONER_PATH); \
 
 install-provisioner: $(PROVISIONER_PATH)
-	#@echo "$(PROVISIONER_MD5SUM)  $(PROVISIONER_PATH)" | md5sum -c \
+	@echo "$(PROVISIONER_MD5SUM)  $(PROVISIONER_PATH)" | md5sum -c \
 		|| rm -v $(PROVISIONER_PATH)
 
 secrets:
-	@mkdir -p ansible/files
 	pass services/consul/ca-crt > ansible/files/consul-ca.crt
 	pass services/consul/ca-key > ansible/files/consul-ca.key
 	pass services/consul/client-crt > ansible/files/consul-client.crt

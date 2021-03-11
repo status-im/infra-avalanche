@@ -24,3 +24,19 @@ resource "cloudflare_record" "wallet" {
   proxied = false
   value   = module.avalanche.public_ips[1]
 }
+
+resource "cloudflare_record" "explorerapi" {
+  zone_id = local.zones["status.im"]
+  name    = "avax-explorerapi.infra"
+  type    = "A"
+  proxied = false
+  value   = module.avalanche.public_ips[2]
+}
+
+resource "cloudflare_record" "explorer" {
+  zone_id = local.zones["status.im"]
+  name    = "avax-explorer.infra"
+  type    = "A"
+  proxied = false
+  value   = module.avalanche.public_ips[2]
+}

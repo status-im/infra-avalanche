@@ -40,3 +40,11 @@ resource "cloudflare_record" "explorer" {
   proxied = false
   value   = module.avalanche.public_ips[2]
 }
+
+resource "cloudflare_record" "api" {
+  zone_id = local.zones["status.im"]
+  name    = "avax-api.infra"
+  type    = "A"
+  proxied = false
+  value   = module.avalanche.public_ips[2]
+}

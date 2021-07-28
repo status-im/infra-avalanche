@@ -10,6 +10,11 @@ node-01.do-ams3.avalanche.test
 node-02.do-ams3.avalanche.test
 node-03.do-ams3.avalanche.test
 
+[avalanche.test]
+node-01.do-ams3.avalanche.test
+node-02.do-ams3.avalanche.test
+node-03.do-ams3.avalanche.test
+
 [do-ams3]
 node-01.do-ams3.avalanche.test
 node-02.do-ams3.avalanche.test

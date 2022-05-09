@@ -6,3 +6,7 @@ bootstrap__consul_encryption_key: '{{lookup("bitwarden", "consul/cluster", field
 bootstarp__consul_agent_acl_token: '{{lookup("bitwarden", "consul/acl-tokens", field="agent-default")}}'
 # Wireguard
 wireguard_consul_acl_token: '{{lookup("bitwarden", "consul/acl-tokens", field="wireguard")}}'
+
+# Custom SSH accounts for Avalanche fleet, should start from UID 8000.
+bootstrap__active_extra_users:
+  - { name: daniel, uid: 8000, admin: true, key: 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIABIKr90uqlwZrcJyTSUvz9X5GKWox8bgtJg43BnKIC+ danielsq@status.im' }

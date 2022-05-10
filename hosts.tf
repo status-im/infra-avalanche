@@ -3,7 +3,7 @@ module "avalanche" {
   host_count = 3
   env        = "avalanche"
   group      = "avalanche"
-  size       = "s-2vcpu-2gb"
+  type       = "s-2vcpu-2gb"
   domain     = var.domain
 
   open_tcp_ports = ["80", "443", "9653", "9655"]

@@ -1,3 +1,5 @@
+## :warning: This is a legacy repository and no longer used.
+
 # Description
 
 This repo manages the infrastructure for Status Consensus network.
